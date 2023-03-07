@@ -1,5 +1,3 @@
-
-
 export const header = {
-    template: `header`
+    template: `<h1>Header</h1>`
 }

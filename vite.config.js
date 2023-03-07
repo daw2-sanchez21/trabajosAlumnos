@@ -25,7 +25,7 @@ export default {
         minify: false, //( Si no se quiere minificar el build) https://vitejs.dev/config/#build-minify (aplica solo a los JS no CSS)
     },
       server: {
-        port: 8080,
+        port: 7380,
         hot: true
       }
     }
