@@ -11,3 +11,6 @@ Usaremos agile y scrum
 1. Crearemos las historias
 2. Dividiremos las historias en tareas
 3. Agruparemos lsa historias en spreens 
+
+## Recursos
+`npm install bootstrap `
