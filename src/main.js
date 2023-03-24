@@ -8,8 +8,10 @@ import { home } from './vistas/home'
 import { prueba } from './vistas/prueba'
 import { header } from './componentes/header'
 import { footer } from './componentes/footer'
+import { newprueba } from './vistas/newprueba'
 
 document.querySelector('header').innerHTML = header.template
-document.querySelector('main').innerHTML = prueba.template
-prueba.script()
+document.querySelector('main').innerHTML = newprueba.template
+newprueba.script()
+
 document.querySelector('footer').innerHTML = footer.template

@@ -95,7 +95,20 @@ export const prueba = {
 
       if (error) { console.error(error) } else { console.log(data) }
     }
-    mostrarComentarios()
+    const getAll = async () => {
+      const { data: perfiles, error } = await supabase
+        .from('perfiles')
+        .select('*')
+      if (error) {
+        throw new Error(error.message)
+      }
+      // devuelve array de objetos
+      return perfiles.map(({ id, nombre, apellidos, user_id, estado, rol, avatar }) => {
+        return new Perfil(id, nombre, apellidos, user_id, estado, rol, avatar)
+      })
+    }
+    getAll()
+    // mostrarComentarios()
     // PREGUNTA 14 HACER QUERY FUNCTION
   }
 
