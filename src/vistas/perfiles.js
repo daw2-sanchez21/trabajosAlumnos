@@ -1,5 +1,5 @@
 // Importamos la conexión a la base de datos
-import { supabase } from './supabase.js'
+import { supabase } from './supabase'
 export class Perfil {
   // Mapping de propiedades de la tabla perfiles
   constructor (id = null, created_at = null, nombre = null, apellidos = null, user_id = null, estado = null, rol = null, avatar = null) {
