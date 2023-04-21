@@ -1,7 +1,8 @@
 export const enrutador = {
   rutas: {
-    login: import('../vistas/loginVsta.js'),
-    registro: import('../vistas/registroVista.js')
+    login: import('../vistas/loginVista.js'),
+    registro: import('../vistas/registroVista.js'),
+    proyectos: import('../vistas/vistaProyectos.js')
 
   },
 

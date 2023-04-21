@@ -11,16 +11,12 @@ export const header = {
 <nav class="navbar navbar-expand-sm bg-light fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand d-flex align-items-center" href="#/home">
-      <img
-        src="/assets/logo_vanilla.svg"
-        alt="Logo"
-        width="30"
-        height="30"
-        class="d-inline-block align-text-top me-2"
-      />
       <span class=""></span>
-      Vanilla Games
-    </a>
+      Trabajo Alumnos
+    </a><a class="navbar-brand d-flex align-items-center" href="#/home">
+    <span class="emailUsuarioLogueado"></span>
+    
+  </a>
     
     <button
       class="navbar-toggler ms-auto
@@ -49,8 +45,9 @@ export const header = {
       // Capturamos los datos del usuario logueado
       const usuarioLogueado = await User.getUser()
       if (usuarioLogueado) {
-        const perfilLogueado = await Perfil.getByUserId(usuarioLogueado.id)
+        const perfilLogueado = await Perfil.getById(usuarioLogueado.id)
         // cargamos el menú superior y usuario para su rol
+        console.log('Esto es usuario logueado', usuarioLogueado)
         menuSuperior.script(perfilLogueado)
         menuUsuario.script(perfilLogueado)
       } else {
