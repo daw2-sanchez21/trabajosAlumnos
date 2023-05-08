@@ -2,34 +2,23 @@ export const menuSuperior = {
   template: `
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul id="menuSuperior" class="navbar-nav">
-          <li class="nav-item">
-          <a class="nav-link" href="#/proyectos">Proyectos</a>
-          </li>
-          
+      
         </ul>
       </div>
     `,
   script: (perfilLogueado) => {
     const items = {
       anonimo: `
-        <li class="nav-item">
-          <a class="nav-link" href="#/proyectos">Proyectos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#/recursos">Recursos</a>
-        </li>
+        
         `,
       registrado: `
         <li class="nav-item">
-          <a class="nav-link" href="#/proyectos">Proyectos</a>
+          <a class="nav-link" href="#/proyectos">Crear Proyecto</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#/recursos">Recursos</a>
+          <a class="nav-link" href="#/homeproyectos">Crud</a>
         </li>
         <li><hr /></li>
-        <li class="nav-item">
-          <a class="nav-link" href="#/adminUsuarios">Admin</a>
-        </li>
         `,
       alumno: `
         <li class="nav-item">
@@ -57,15 +46,12 @@ export const menuSuperior = {
         `,
       admin: `
         <li class="nav-item">
-          <a class="nav-link" href="#/proyectos">Proyectos</a>
+          <a class="nav-link" href="#/proyectos">Crear Proyecto</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#/recursos">Recursos</a>
+          <a class="nav-link" href="#/homeproyectos">Crud</a>
         </li>
         <li><hr /></li>
-        <li class="nav-item">
-          <a class="nav-link" href="#/adminUsuarios">Admin</a>
-        </li>
         `
     }
     if (perfilLogueado !== 'anonimo') {

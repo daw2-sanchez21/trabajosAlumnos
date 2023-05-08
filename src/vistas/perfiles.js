@@ -22,8 +22,8 @@ export class Perfil {
       throw new Error(error.message)
     }
     // devuelve array de objetos
-    return perfiles.map(({ id, nombre, apellidos, user_id, estado, rol, avatar }) => {
-      return new Perfil(id, nombre, apellidos, user_id, estado, rol, avatar)
+    return perfiles.map(({ id, created_at, nombre, apellidos, user_id, estado, rol, avatar }) => {
+      return new Perfil(id, created_at, nombre, apellidos, user_id, estado, rol, avatar)
     })
   }
 
@@ -71,17 +71,17 @@ export class Perfil {
     return true
   }
 
-  static async getById (id) {
+  static async getById (email) {
     const { data: perfil, error } = await supabase
       .from('perfiles')
       .select('*')
-      .eq('id', `${id}`)
+      .eq('email', `${email}`)
     if (error) {
       throw new Error(error.message)
     }
     // devuelve array de objetos
-    return perfil.map(({ id, nombre, apellidos, user_id, estado, rol, avatar }) => {
-      return new Perfil(id, nombre, apellidos, user_id, estado, rol, avatar)
+    return perfil.map(({ id, created_at, nombre, apellidos, user_id, estado, rol, avatar }) => {
+      return new Perfil(id, created_at, nombre, apellidos, user_id, estado, rol, avatar)
     })
   }
 }

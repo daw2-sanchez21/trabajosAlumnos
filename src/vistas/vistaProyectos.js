@@ -46,6 +46,9 @@ export default {
     </div>
         `,
   script: () => {
+    const main = document.querySelector('main')
+    main.style.backgroundColor = '#FFFFFF'
+    main.style.height = '1000px'
     document.querySelector('#form_proyecto').addEventListener('submit', async function (e) {
       e.preventDefault()
       try {
@@ -60,7 +63,7 @@ export default {
         await Proyecto.create(proyecto)
         alert('Proyecto creado con éxito')
         // Cargamos la página login
-        // window.location.href = '/#/proyectos'
+        // window.location.href = '/#/proyectos'a
       } catch (error) {
         console.log(error)
         alert('Error al crear proyecto ' + error)

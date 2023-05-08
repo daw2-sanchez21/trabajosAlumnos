@@ -69,7 +69,7 @@ export default {
           // y ocultamos item 'login' para mostrar item 'logout'
           document.querySelector('.liLogin').classList.add('d-none')
           // document.querySelector('.liLogout').classList.remove('d-none')
-          header.script()
+          header.script()// OBTENER EL UID ESE ES EL FALLO
           // Cagamos la página home
           window.location.href = '/#/proyectos'
         } catch (error) {

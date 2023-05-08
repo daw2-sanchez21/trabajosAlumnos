@@ -19,8 +19,8 @@ export class Comentario {
       throw new Error(error.message)
     }
     // devuelve array de objetos
-    return proyectos.map(({ id, comentario, usuario_id, proyecto_id }) => {
-      return new Comentario(id, comentario, usuario_id, proyecto_id)()
+    return proyectos.map(({ id, created_at, comentario, usuario_id, proyecto_id }) => {
+      return new Comentario(id, created_at, comentario, usuario_id, proyecto_id)()
     })
   }
 
@@ -35,7 +35,7 @@ export class Comentario {
       throw new Error(error.message)
     }
     // Devuelve un nuevo objeto con los datos del registro
-    return new Comentario(coment.id, coment.nombre, coment.user_id, coment.proyecto_id)
+    return new Comentario(coment.id, coment.created_at, coment.nombre, coment.user_id, coment.proyecto_id)
   }
 
   // leer registro por id (método static que se puede leer desde la clase sin necesidad de crear una instancia)
@@ -49,7 +49,7 @@ export class Comentario {
       throw new Error(error.message)
     }
     // Devuelve un nuevo objeto con los datos del registro
-    return new Comentario(coment.id, coment.nombre, coment.usuario_id, coment.proyecto_id)
+    return new Comentario(coment.id, coment.created_at, coment.nombre, coment.usuario_id, coment.proyecto_id)
   }
 
   // leer registro por id (método static que se puede leer desde la clase sin necesidad de crear una instancia)
@@ -63,7 +63,7 @@ export class Comentario {
       throw new Error(error.message)
     }
     // Devuelve un nuevo objeto con los datos del registro
-    return new Comentario(coment.id, coment.nombre, coment.usuario_id, coment.proyecto_id)
+    return new Comentario(coment.id, coment.created_at, coment.nombre, coment.usuario_id, coment.proyecto_id)
   }
 
   // borrar

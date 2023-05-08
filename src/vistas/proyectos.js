@@ -22,8 +22,8 @@ export class Proyecto {
       throw new Error(error.message)
     }
     // devuelve array de objetos
-    return proyectos.map(({ id, nombre, descripcion, usuario_id, nota, enlace, activo }) => {
-      return new Proyecto(id, nombre, descripcion, usuario_id, nota, enlace, activo)
+    return proyectos.map(({ id, created_at, nombre, descripcion, usuario_id, nota, enlace, activo }) => {
+      return new Proyecto(id, created_at, nombre, descripcion, usuario_id, nota, enlace, activo)
     })
   }
 
@@ -49,24 +49,10 @@ export class Proyecto {
       .select()
       // console.log('nuevo perfil ',error);
     if (error) {
+      swal({ title: 'No se ha podido añadir', text: `${error}`, icon: 'warning' })
       throw new Error(error.message)
     }
-    return true
-  }
-
-  // actualizar
-  async update () {
-    const { error } = await supabase
-      .from('proyectos')
-      .update({
-        nombre: this.nombre,
-        descripcion: this.descripcion
-      })
-      .eq('id', this.id)
-      .single()
-    if (error) {
-      throw new Error(error.message)
-    }
+    swal({ title: 'Añadido correctamente', icon: 'success' })
     return true
   }
 
@@ -75,10 +61,30 @@ export class Proyecto {
     const { error } = await supabase
       .from('proyectos')
       .delete()
-      .eq('id', id)
+      .match({ id: `${id}` })
     if (error) {
-      throw new Error(error.message)
+      swal({ title: 'No se ha podido eliminar', text: `${error}`, icon: 'warning' })
+    } else {
+      swal({ title: 'Eliminado Correctamente', icon: 'success' })
     }
-    return true
+  }
+
+  static async updateLibro (dataProyecto) {
+    const { data, error } = await supabase
+      .from('proyectos')
+      .update({
+        nombre: dataProyecto.nombre,
+        descripcion: dataProyecto.descripcion,
+        nota: dataProyecto.nota,
+        enlace: dataProyecto.enlace,
+        activo: dataProyecto.activo
+      })
+      .match({ id: `${dataProyecto.id}` })
+
+    if (error) {
+      swal({ title: 'No se ha podido actualizar el proyecto', text: `${error}`, icon: 'warning' })
+    } else {
+      swal({ title: 'Actualizado', icon: 'success' })
+    }
   }
 }

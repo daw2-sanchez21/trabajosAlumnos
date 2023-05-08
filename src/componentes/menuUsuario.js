@@ -43,11 +43,12 @@ export const menuUsuario = {
         <li>
           <a class="liRegistro dropdown-item" href="#/registro">Registrate</a>
         </li>
+        <li><a class="liLogout d-none dropdown-item" href="">Logout</a></li>
         
       `,
       registrado: `
       <li class="text-center" id="rolUsuarioLogueado">
-        anónimo
+        registrado
       </li>
       <li>
         <a
@@ -59,7 +60,7 @@ export const menuUsuario = {
           >Editar perfil</a
         >
       </li>      
-      <li><a class="liLogout dropdown-item" href="">Logout</a></li>
+      <li><a class="liLogout  d-none dropdown-item" href="">Logout</a></li>
       `,
       alumno: `
       <li class="text-center" id="rolUsuarioLogueado">
