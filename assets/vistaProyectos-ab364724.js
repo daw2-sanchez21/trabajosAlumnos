@@ -1,5 +1,5 @@
-import { P as Proyecto } from "./proyectos-dadd224c.js";
-import { U as User } from "./main-187bd500.js";
+import { P as Proyecto } from "./proyectos-a4a91aaa.js";
+import { U as User } from "./main-ca328654.js";
 const vistaProyectos = {
   template: `
       <div

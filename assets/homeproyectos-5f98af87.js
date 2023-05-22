@@ -1,5 +1,5 @@
-import { P as Proyecto } from "./proyectos-dadd224c.js";
-import "./main-187bd500.js";
+import { P as Proyecto } from "./proyectos-a4a91aaa.js";
+import "./main-ca328654.js";
 const homeproyectos = {
   template: `
   

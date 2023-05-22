@@ -1,4 +1,4 @@
-import { U as User, P as Perfil } from "./main-187bd500.js";
+import { U as User, P as Perfil } from "./main-ca328654.js";
 const registroVista = {
   template: `
     <div
@@ -32,7 +32,7 @@ const registroVista = {
                 type="password"
                 class="form-control"
                 value=""
-                pattern="[A-Za-z]{8,}"
+                pattern="[A-Za-z0-9]"
                 placeholder = "Contraseña"
                 id="password"
                 required

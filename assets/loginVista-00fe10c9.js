@@ -1,4 +1,4 @@
-import { U as User, h as header } from "./main-187bd500.js";
+import { U as User, h as header } from "./main-ca328654.js";
 const loginVista = {
   template: `
     <div
@@ -26,7 +26,7 @@ const loginVista = {
             <p class="mt-3">
                 <a href="">No recuerdo mi contraseña</a>
                 <br />
-                <a href="registro.html">Quiero Registrarme</a>
+                <a href='/#/registro'>Quiero Registrarme</a>
             </p>
             <p></p>
             <hr class="mt-5" />

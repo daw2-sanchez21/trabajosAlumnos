@@ -11622,13 +11622,13 @@ const footer = {
 };
 const enrutador = {
   rutas: {
-    login: __vitePreload(() => import("./loginVista-6c55899b.js"), true ? [] : void 0, import.meta.url),
-    registro: __vitePreload(() => import("./registroVista-e426a589.js"), true ? [] : void 0, import.meta.url),
-    proyectos: __vitePreload(() => import("./vistaProyectos-6a0e519f.js"), true ? ["./vistaProyectos-6a0e519f.js","./proyectos-dadd224c.js"] : void 0, import.meta.url),
-    homeproyectos: __vitePreload(() => import("./homeproyectos-d8b25c4e.js"), true ? ["./homeproyectos-d8b25c4e.js","./proyectos-dadd224c.js"] : void 0, import.meta.url),
+    login: __vitePreload(() => import("./loginVista-00fe10c9.js"), true ? [] : void 0, import.meta.url),
+    registro: __vitePreload(() => import("./registroVista-c964237b.js"), true ? [] : void 0, import.meta.url),
+    proyectos: __vitePreload(() => import("./vistaProyectos-ab364724.js"), true ? ["./vistaProyectos-ab364724.js","./proyectos-a4a91aaa.js"] : void 0, import.meta.url),
+    homeproyectos: __vitePreload(() => import("./homeproyectos-5f98af87.js"), true ? ["./homeproyectos-5f98af87.js","./proyectos-a4a91aaa.js"] : void 0, import.meta.url),
     homecomentarios: __vitePreload(() => import("./homeComentarios-4ed993c7.js"), true ? [] : void 0, import.meta.url),
-    editar: __vitePreload(() => import("./editar-f75c6b21.js"), true ? ["./editar-f75c6b21.js","./proyectos-dadd224c.js"] : void 0, import.meta.url),
-    add: __vitePreload(() => import("./addProyecto-446c5977.js"), true ? ["./addProyecto-446c5977.js","./proyectos-dadd224c.js"] : void 0, import.meta.url)
+    editar: __vitePreload(() => import("./editar-b7bf5595.js"), true ? ["./editar-b7bf5595.js","./proyectos-a4a91aaa.js"] : void 0, import.meta.url),
+    add: __vitePreload(() => import("./addProyecto-0eb42f08.js"), true ? ["./addProyecto-0eb42f08.js","./proyectos-a4a91aaa.js"] : void 0, import.meta.url)
   },
   async router() {
     const pathCompleto = window.location.hash;
